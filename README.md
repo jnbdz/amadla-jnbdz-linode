@@ -1,4 +1,4 @@
-# 🐰Amadla🐰 | jnbdz | Linode
+# 🐰Amadla | jnbdzΣ𝆑 | Linode
 Amadla personal cloud☁ setup (for Linode).
 
 ## What is it about?
