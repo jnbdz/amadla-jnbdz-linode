@@ -1,0 +1,52 @@
+---
+version: 1
+variables:
+  cloud: Linode
+instances:
+  - name: bastion-host
+    type: Base
+    cloud: "${{ cloud }}"
+    private: true
+    entry-server: vpn-server
+    parameters:
+      type: small-1gb
+
+  - name: monitoring-server
+    type: Containers
+    cloud: "${{ cloud }}"
+    private: true
+    entry-server: vpn-server
+    parameters:
+      type: small-1gb
+    apps:
+      OpenSearch:
+      OpenSearchDashboards:
+
+  - name: vpn-server
+    type: Base
+    cloud: "${{ cloud }}"
+    private: false
+    parameters:
+      type: small-1gb
+    apps:
+      OpenVPN:
+
+  - name: container-apps-1
+    type: Containers
+    cloud: "${{ cloud }}"
+    private: true
+    entry-server: vpn-server
+    parameters:
+      type: small-2gb
+    apps:
+      Keycloak:
+      NextCloud:
+        configuration:
+          network:
+            private:
+              entries:
+                - location: /nextcloud
+                  ports:
+                    - internal: 8080
+                      external: 80
+                    - internal: 8080

@@ -1,0 +1,6 @@
+---
+version: 1
+clouds:
+  - name: Linode
+    repository: git@github.com:jnbdz/amadla-cloud-Linode.git
+    tag: v1.0

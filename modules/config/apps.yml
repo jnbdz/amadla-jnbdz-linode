@@ -1,0 +1,42 @@
+---
+version: 1
+apps:
+  - name: Keycloak
+    repository: git@github.com:Amadla-com/app-Keycloak.git
+    tag: v1.0
+    configuration:
+      network:
+        private:
+          entries:
+            - location: /kaycloak
+              ports:
+                - internal: 8080
+                  external: 80
+                - internal: 8080
+                  external: 443
+
+  - name: NextCloud
+    repository: git@github.com:Amadla-com/app-NextCloud.git
+    tag: v1.0
+    configuration:
+      network:
+        private:
+          entries:
+            - location: /nextcloud
+              ports:
+                - internal: 8089
+                  external: 80
+                - internal: 8087
+                  external: 443
+
+  - name: OpenVPN
+    repository: git@github.com:Amadla-com/app-OpenVPN.git
+    tag: v1.0
+
+  - name: OpenSearch
+    repository: git@github.com:Amadla-com/app-OpenSearch.git
+    tag: v1.0
+
+  - name: OpenSearchDashboards
+    repository: git@github.com:Amadla-com/app-OpenSearchDashboards.git
+    tag: v1.0

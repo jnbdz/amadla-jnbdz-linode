@@ -1,0 +1,26 @@
+---
+version: 1
+servers:
+  - name: Base
+    repository: git@github.com:jnbdz/amadla-server-Base.git
+    tag: v1.0
+
+  - name: Bastion
+    repository: git@github.com:jnbdz/amadla-server-Bastion.git
+    tag: v1.0
+
+  - name: Containers
+    repository: git@github.com:jnbdz/amadla-server-Containers.git
+    tag: v1.0
+
+  - name: Monitoring
+    repository: git@github.com:jnbdz/amadla-server-Monitoring.git
+    tag: v1.0
+
+  - name: Vault
+    repository: git@github.com:jnbdz/amadla-server-Vault.git
+    tag: v1.0
+
+  - name: VPN
+    repository: git@github.com:jnbdz/amadla-server-VPN.git
+    tag: v1.0

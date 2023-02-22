@@ -1,0 +1,11 @@
+# Unix LF endings
+Dockefile   eol=lf
+*.md        eol=lf
+*.mk        eol=lf
+*.yml       eol=lf
+*.cfg       eol=lf
+*.j2        eol=lf
+*.hcl       eol=lf
+
+# Windows bash scripts are also Unix LF endings
+*.sh	    eol=lf

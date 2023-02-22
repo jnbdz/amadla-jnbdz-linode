@@ -1,0 +1,62 @@
+Icon?
+.svn
+.AppleDouble
+._*
+.project
+.settings
+.vagrant*
+.python-version
+
+#############
+## Windows detritus
+#############
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Mac crap
+.DS_Store
+
+#############
+## Python
+#############
+
+*.py[co]
+
+.venv/
+
+__pycache__
+env3.7
+env3.6
+env
+dist
+.mypy_cache
+site
+.coverage
+htmlcov
+.pytest_cache
+coverage.xml
+
+# Installer logs
+pip-log.txt
+
+## Directory-based project format:
+.idea/
+
+.vault
+.secrets
+*.pem
+
+.vscode/
+
+# Terraform
+.terraform/
+
+.env
